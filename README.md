@@ -1,5 +1,10 @@
 # Web3EOG: Cross-Chain Security Monitor
 
+[![CI](https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor/actions/workflows/ci.yml)
+[![Security Scan](https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor/actions/workflows/security.yml/badge.svg)](https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor/actions/workflows/security.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor/blob/main/CONTRIBUTING.md)
+
 A real-time security monitoring system that detects vulnerabilities across multiple blockchain networks before they can be exploited.
 
 ![Security Monitoring Dashboard](https://placeholder.com/dashboard.png)
@@ -79,8 +84,8 @@ Identifies transaction ordering patterns that suggest front-running or sandwich 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor.git
-cd WEB3EOG-Cross-Chain-Link-Monitor
+git clone https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor.git
+cd WEB3E0G_CrossChain_Monitor
 ```
 
 2. Install dependencies
@@ -190,13 +195,7 @@ POST /api/analyze            # Analyze specific transaction
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! Please check out our [Contributing Guide](CONTRIBUTING.md) for guidelines about how to proceed.
 
 ## License
 

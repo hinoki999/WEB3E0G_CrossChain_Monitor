@@ -1,3 +1,8 @@
+---
+layout: default
+title: Architecture
+---
+
 # System Architecture
 
 This document provides a detailed description of the Web3EOG Cross-Chain Security Monitor architecture.
