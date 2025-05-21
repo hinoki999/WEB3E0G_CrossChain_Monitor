@@ -1,0 +1,22 @@
+{
+  "chains": [
+    {
+      "name": "Ethereum",
+      "chainId": 1,
+      "rpcUrl": "https://mainnet.infura.io/v3/YOUR_API_KEY",
+      "startBlock": 16000000
+    },
+    {
+      "name": "Polygon",
+      "chainId": 137,
+      "rpcUrl": "https://polygon-rpc.com",
+      "startBlock": 40000000
+    },
+    {
+      "name": "BSC",
+      "chainId": 56,
+      "rpcUrl": "https://bsc-dataseed.binance.org",
+      "startBlock": 25000000
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "patterns": [
+    {
+      "name": "reentrancy",
+      "sensitivity": 0.85,
+      "methodIds": ["0x42842e0e", "0xb88d4fde"]
+    },
+    {
+      "name": "crossChainReplay",
+      "sensitivity": 0.9,
+      "methodIds": ["0x38ed1739"]
+    },
+    {
+      "name": "flashLoanPattern",
+      "sensitivity": 0.8,
+      "methodIds": ["0x5cffe9de", "0xc29278f4"]
+    },
+    {
+      "name": "bridgeTransfer",
+      "sensitivity": 0.85,
+      "methodIds": ["0xa9059cbb", "0xf6c5f201"]
+    },
+    {
+      "name": "proxyUpgrade",
+      "sensitivity": 0.8,
+      "methodIds": ["0x3659cfe6", "0xf851a440"]
+    }
+  ]
+}

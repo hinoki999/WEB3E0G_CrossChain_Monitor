@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: security-monitor-mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASS}
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+
+  indexer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.indexer
+    container_name: security-monitor-indexer
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - MONGODB_URI=${MONGODB_URI}
+      - ETH_RPC_URL=${ETH_RPC_URL}
+      - POLYGON_RPC_URL=${POLYGON_RPC_URL}
+      - BSC_RPC_URL=${BSC_RPC_URL}
+      - LOG_LEVEL=${LOG_LEVEL}
+    volumes:
+      - ../config:/app/config
+
+  analyzer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.analyzer
+    container_name: security-monitor-analyzer
+    restart: always
+    depends_on:
+      - mongodb
+      - indexer
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - MONGODB_URI=${MONGODB_URI}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_ENDPOINT=${LLM_ENDPOINT}
+      - PATTERN_SENSITIVITY=${PATTERN_SENSITIVITY}
+      - ANOMALY_THRESHOLD=${ANOMALY_THRESHOLD}
+      - LOG_LEVEL=${LOG_LEVEL}
+    volumes:
+      - ../config:/app/config
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: security-monitor-api
+    restart: always
+    depends_on:
+      - mongodb
+      - analyzer
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - MONGODB_URI=${MONGODB_URI}
+      - API_KEY=${API_KEY}
+      - RATE_LIMIT=${RATE_LIMIT}
+      - LOG_LEVEL=${LOG_LEVEL}
+    ports:
+      - "${PORT}:${PORT}"
+
+  dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dashboard
+    container_name: security-monitor-dashboard
+    restart: always
+    depends_on:
+      - api
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - API_URL=http://api:${PORT}
+      - DASHBOARD_SECRET=${DASHBOARD_SECRET}
+      - SESSION_TIMEOUT=${SESSION_TIMEOUT}
+      - LOG_LEVEL=${LOG_LEVEL}
+    ports:
+      - "3001:3001"
+
+volumes:
+  mongodb_data:

@@ -1,0 +1,49 @@
+{
+  "name": "web3eog-cross-chain-security-monitor",
+  "version": "1.0.0",
+  "description": "A real-time security monitoring system that detects vulnerabilities across multiple blockchain networks before they can be exploited",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:indexer": "node src/indexers/index.js",
+    "start:analyzer": "node src/analysis/index.js",
+    "start:api": "node src/api/index.js",
+    "start:dashboard": "node src/dashboard/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor.git"
+  },
+  "keywords": [
+    "blockchain",
+    "security",
+    "monitoring",
+    "cross-chain",
+    "vulnerability",
+    "detection"
+  ],
+  "author": "Hirule Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor/issues"
+  },
+  "homepage": "https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "web3": "^1.9.0",
+    "axios": "^1.3.5",
+    "winston": "^3.8.2",
+    "cors": "^2.8.5",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
