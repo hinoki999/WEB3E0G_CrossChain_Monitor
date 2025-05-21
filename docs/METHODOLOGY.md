@@ -1,3 +1,8 @@
+---
+layout: default
+title: Methodology
+---
+
 # Security Monitoring Methodology
 
 This document explains the methodology used by the Web3EOG Cross-Chain Security Monitor to detect vulnerabilities.

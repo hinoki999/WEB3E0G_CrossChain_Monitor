@@ -1,8 +1,7 @@
----
-layout: default
-title: GitHub Pages Configuration
----
-
 theme: jekyll-theme-cayman
 title: Web3EOG Documentation
 description: Documentation for the Web3EOG Cross-Chain Security Monitor
+baseurl: "/WEB3E0G_CrossChain_Monitor"
+url: "https://hinoki999.github.io"
+markdown: kramdown
+permalink: /:title.html

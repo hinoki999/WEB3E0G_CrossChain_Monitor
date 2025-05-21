@@ -1,3 +1,8 @@
+---
+layout: default
+title: Vulnerabilities
+---
+
 # Vulnerability Types
 
 This document describes the types of vulnerabilities that the Web3EOG Cross-Chain Security Monitor is designed to detect.
