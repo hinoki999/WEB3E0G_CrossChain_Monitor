@@ -1,3 +1,8 @@
+---
+layout: default
+title: Deployment Guide
+---
+
 # Deployment Guide
 
 This guide explains how to deploy the Web3EOG Cross-Chain Security Monitor system in various environments.
@@ -15,8 +20,8 @@ This guide explains how to deploy the Web3EOG Cross-Chain Security Monitor syste
 
 1. Clone the repository
 ```bash
-git clone https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor.git
-cd WEB3EOG-Cross-Chain-Link-Monitor
+git clone https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor.git
+cd WEB3E0G_CrossChain_Monitor
 ```
 
 2. Install dependencies
@@ -58,8 +63,8 @@ npm run dev
 
 1. Clone the repository
 ```bash
-git clone https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor.git
-cd WEB3EOG-Cross-Chain-Link-Monitor
+git clone https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor.git
+cd WEB3E0G_CrossChain_Monitor
 ```
 
 2. Configure environment variables
@@ -77,8 +82,8 @@ docker-compose -f docker-compose.production.yml up -d
 
 1. Clone the repository
 ```bash
-git clone https://github.com/hinoki999/WEB3EOG-Cross-Chain-Link-Monitor.git
-cd WEB3EOG-Cross-Chain-Link-Monitor
+git clone https://github.com/hinoki999/WEB3E0G_CrossChain_Monitor.git
+cd WEB3E0G_CrossChain_Monitor
 ```
 
 2. Install dependencies
